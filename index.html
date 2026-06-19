@@ -40,6 +40,8 @@
   }
 }
 </script>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate icon" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Archivo:wght@600;700;800;900&display=swap" rel="stylesheet">
 <style>
@@ -280,6 +282,60 @@ main{position:relative;z-index:1}
   .tgrid{grid-template-columns:1fr}
   .rgrid{grid-template-columns:repeat(2,1fr)}
 }
+
+/* ── HAMBURGER ─────────────────────────────── */
+.nav-ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none;z-index:210;margin-left:8px}
+.nav-ham span{display:block;width:22px;height:2.5px;background:var(--text);border-radius:2px;transition:all .3s}
+.nav-ham.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-ham.open span:nth-child(2){opacity:0}
+.nav-ham.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav-mob{display:none;position:fixed;top:68px;left:0;right:0;background:rgba(4,12,25,.98);border-bottom:1px solid var(--bdr);padding:20px 28px 28px;z-index:199;flex-direction:column;gap:0}
+.nav-mob.open{display:flex}
+.nav-mob a{font-size:16px;font-weight:500;color:var(--muted);padding:14px 0;border-bottom:1px solid var(--bdr);transition:color .2s}
+.nav-mob a:last-child{border-bottom:none;margin-top:12px;padding:14px;text-align:center;background:var(--blue);color:#fff;border-radius:8px;font-weight:700;border-bottom:none}
+.nav-mob a.active,.nav-mob a:hover{color:var(--text)}
+/* Active nav state */
+.nl a.active{color:var(--text)}
+/* Scroll margin so sections aren't hidden under sticky nav */
+#how,#who,#results,#threats,#contact,#resources{scroll-margin-top:80px}
+/* ── APP PREVIEW ─────────────────────────────── */
+.app-preview{margin-top:8px}
+.ap-valid{display:flex;align-items:center;gap:10px;padding:10px 14px;background:var(--success-bg);border:1px solid rgba(0,206,132,.2);border-radius:10px}
+.ap-icon{width:40px;height:40px;border-radius:8px;flex-shrink:0;object-fit:cover}
+.ap-play-icon{width:40px;height:40px;border-radius:8px;background:rgba(0,196,238,.12);display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--cyan);flex-shrink:0}
+.ap-info{flex:1;min-width:0}
+.ap-name{font-size:13px;font-weight:700;color:var(--text);display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ap-store{font-size:11px;color:var(--muted);display:block;margin-top:2px}
+.ap-ok{font-size:12px;font-weight:700;color:var(--success);white-space:nowrap}
+.ap-invalid{font-size:13px;color:var(--warn);font-weight:500;display:block;padding:8px 12px;background:rgba(255,168,38,.08);border:1px solid rgba(255,168,38,.2);border-radius:8px}
+.ap-loading{font-size:13px;color:var(--muted);display:block;padding:8px 12px}
+/* ── MOBILE RESPONSIVE ─────────────────────────────── */
+@media(max-width:880px){
+  .nl,.nav-btn{display:none!important}
+  .nav-ham{display:flex}
+  .hero-wrap{flex-direction:column;padding:88px 20px 48px;gap:32px;min-height:auto}
+  .hero-right{max-width:100%;width:100%}
+  .h1{font-size:clamp(38px,8vw,60px)}
+  .proof-grid{grid-template-columns:repeat(2,1fr)}
+  .tgrid{grid-template-columns:1fr}
+  .sgrid{grid-template-columns:1fr}
+  .pgrid{grid-template-columns:1fr}
+  .art-grid{grid-template-columns:1fr}
+  .fbox{padding:24px 20px}
+  .frow{flex-direction:column}
+  .sec,.fsec{padding-left:20px;padding-right:20px}
+}
+@media(max-width:640px){
+  .h1{font-size:clamp(34px,8vw,48px)}
+  .sec-h2{font-size:clamp(22px,6vw,32px)}
+  .sec-sub{font-size:15px}
+  .proof-grid{grid-template-columns:1fr 1fr}
+  .rcall{flex-direction:column!important}
+  .hero-cta{width:100%;justify-content:center}
+  .ni{padding:0 16px}
+  .ftr{flex-direction:column;align-items:flex-start;gap:16px}
+}
+
 </style>
 </head>
 <body>
@@ -317,6 +373,7 @@ main{position:relative;z-index:1}
   <symbol id="ipd-palette" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
     <path d="M12 2.5 a9.5 9.5 0 1 0 0 19 c1.8 0 2.6-1 2.6-2.2 c0-1-0.8-1.6-0.8-2.6 c0-1.6 1.4-2.4 3.2-2.4 a5.2 5.2 0 0 0 5-5.3 C22 6.8 17.7 2.5 12 2.5 Z"/><circle cx="7.8" cy="11" r="1.3" fill="currentColor" stroke="none"/><circle cx="11.5" cy="7.5" r="1.3" fill="currentColor" stroke="none"/><circle cx="16" cy="9.3" r="1.3" fill="currentColor" stroke="none"/>
   </symbol>
+  <symbol id="ipd-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></symbol>
   <symbol id="ipd-storefront" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
     <path d="M3 8.5 L4.5 3.5 H19.5 L21 8.5"/><path d="M3 8.5 V20 H21 V8.5"/><path d="M3 8.5 H21"/><path d="M9 20 V14 H15 V20"/>
   </symbol>
@@ -345,16 +402,26 @@ main{position:relative;z-index:1}
       <span class="logo-text">IP Defense<span class="logo-ai">.ai</span></span>
     </div>
     <ul class="nl">
+      <li><a href="#threats">Threats</a></li>
       <li><a href="#how">How It Works</a></li>
-      <li><a href="#results">Results</a></li>
+      <li><a href="#who">Who We Help</a></li>
+      <li><a href="#results">Case Study</a></li>
       <li><a href="/pricing/">Pricing</a></li>
       <li><a href="/resources/">Resources</a></li>
       <li><a href="/faq/">FAQ</a></li>
-      <li><a href="/about/">About</a></li>
     </ul>
-    <a href="#contact" class="nav-btn">Get A Free IP Risk Review</a>
+    <a href="#contact" class="nav-btn">Free IP Risk Review</a>
   </div>
 </nav>
+<div class="nav-mob" id="navMob" role="dialog" aria-label="Mobile menu">
+  <a href="#how">How It Works</a>
+  <a href="#results">Results</a>
+  <a href="/pricing/">Pricing</a>
+  <a href="/resources/">Resources</a>
+  <a href="/faq/">FAQ</a>
+  <a href="/about/">About</a>
+  <a href="#contact">Get a Free Scan</a>
+</div>
 
 <main>
 
@@ -469,13 +536,13 @@ main{position:relative;z-index:1}
 <!-- THREATS -->
 <div class="sec" id="threats">
   <span class="sec-lbl">The Threats</span>
-  <h2 class="sec-h2">What's targeting your app's<br>growth right now</h2>
+  <h2 class="sec-h2">What's targeting your app's<br>growth right now?</h2>
   <p class="sec-sub">As apps scale, bad actors follow. These are the four threats app teams worry about most — and the ones we resolve.</p>
   <div class="tgrid">
     <div class="tcard"><div class="tico"><svg class="icon-24"><use href="#ipd-copy"/></svg></div><h3>Copycat Apps &amp; Lookalike Listings</h3><p>Near-identical apps, names, icons, and screenshots built to intercept your traffic. Every install they capture is a download — and a subscriber — taken from you.</p></div>
     <div class="tcard"><div class="tico"><svg class="icon-24"><use href="#ipd-user-flag"/></svg></div><h3>Brand &amp; Social Impersonation</h3><p>Fake accounts and "official" profiles that scam your users under your name. You lose the revenue today — and the user's trust forever.</p></div>
     <div class="tcard"><div class="tico"><svg class="icon-24"><use href="#ipd-search"/></svg></div><h3>Keyword &amp; Search Abuse</h3><p>Bad actors stuffing and bidding on your branded keywords — taxing your ad spend and hijacking the searches that should convert to your app.</p></div>
-    <div class="tcard"><div class="tico"><svg class="icon-24"><use href="#ipd-storefront"/></svg></div><h3>Misleading &amp; Infringing Listings</h3><p>App Store and Google Play violations that confuse your customers and dilute your rankings — and that platforms will act on when properly reported.</p></div>
+    <div class="tcard"><div class="tico"><svg class="icon-24"><use href="#ipd-globe"/></svg></div><h3>Fake Websites &amp; Domain Squatting</h3><p>Lookalike domains and phishing sites impersonating your brand — capturing users who search for you, harvesting credentials, and routing traffic away from your real product.</p></div>
   </div>
 </div>
 
@@ -578,19 +645,24 @@ main{position:relative;z-index:1}
   <div class="fbox">
     <span class="fst">Your Contact Info</span>
     <div class="frow">
-      <div class="fg"><label class="fl">First Name<span class="req">*</span></label><input id="f-fname" type="text" class="fi" placeholder="Jane" required></div>
-      <div class="fg"><label class="fl">Last Name<span class="req">*</span></label><input id="f-lname" type="text" class="fi" placeholder="Smith" required></div>
+      <div class="fg"><label class="fl">First Name<span class="req">*</span></label><input id="f-fname" type="text" class="fi" placeholder="Jane" required autocomplete="given-name"></div>
+      <div class="fg"><label class="fl">Last Name<span class="req">*</span></label><input id="f-lname" type="text" class="fi" placeholder="Smith" required autocomplete="family-name"></div>
     </div>
     <div class="frow">
-      <div class="fg"><label class="fl">Work Email<span class="req">*</span></label><input id="f-email" type="email" class="fi" placeholder="jane@company.com" required></div>
-      <div class="fg"><label class="fl">Phone Number</label><input id="f-phone" type="tel" class="fi" placeholder="+1 (416) 456-0868" oninput="fmtPhone(this)"></div>
+      <div class="fg"><label class="fl">Company Name<span class="req">*</span></label><input id="f-company" type="text" class="fi" placeholder="Acme Corp" required autocomplete="organization"></div>
+      <div class="fg"><label class="fl">Work Email<span class="req">*</span></label><input id="f-email" type="email" class="fi" placeholder="jane@company.com" required autocomplete="email" oninput="validateEmailLive(this)"></div>
+    </div>
+    <div class="frow">
+      <div class="fg"><label class="fl">Phone Number</label><input id="f-phone" type="tel" class="fi" placeholder="+1 (416) 456-0868" oninput="fmtPhone(this)" autocomplete="tel"></div>
+      <div class="fg" style="display:flex;align-items:flex-end"><div style="font-size:13px;color:var(--muted);padding-bottom:11px;line-height:1.5">📱 We may text you an update on your scan.</div></div>
     </div>
 
     <hr class="fdiv">
     <span class="fst">Your Apps</span>
 
     <div id="appLinks">
-      <div class="fg"><label class="fl">App Store or Google Play URL<span class="req">*</span></label><input id="f-app-0" type="url" class="fi app-url-input" placeholder="https://apps.apple.com/us/app/your-app" required></div>
+      <div class="fg"><label class="fl">App Store or Google Play URL<span class="req">*</span></label><input id="f-app-0" type="url" class="fi app-url-input" placeholder="https://apps.apple.com/us/app/your-app" required oninput="validateAppURL(this)">
+        <div class="app-preview" id="ap-0"></div></div>
     </div>
     <button type="button" class="fadd" onclick="addAppLink()">+ Add another app</button>
 
@@ -600,7 +672,7 @@ main{position:relative;z-index:1}
     <div class="fg"><textarea id="f-situation" class="fta" placeholder="Tell us about your app and what you're looking to protect..." required></textarea></div>
 
     <div id="f-error" style="display:none;color:var(--danger);font-size:13px;font-weight:600;margin-bottom:14px;padding:11px 15px;background:var(--danger-bg);border:1px solid rgba(255,58,86,.25);border-radius:8px"></div>
-    <button type="button" class="fsubmit" id="fsubmit" onclick="submitForm(this)"><svg class="icon-18" aria-hidden="true"><use href="#ipd-shield"/></svg>Send Assessment Request</button>
+    <button type="button" class="fsubmit" id="fsubmit" onclick="submitForm(this)"><svg class="icon-18" aria-hidden="true"><use href="#ipd-shield"/></svg>Request a Free IP Risk Review</button>
   </div>
 </div>
 
@@ -611,14 +683,26 @@ main{position:relative;z-index:1}
   <span class="sec-lbl">Resources</span>
   <h2 class="sec-h2">Learn how brand abuse works<br>— and how to fight it</h2>
   <p class="sec-sub" style="margin-bottom:40px">Practical guides for app founders and growth teams dealing with copycats, impersonation, and App Store violations.</p>
-  <div class="art-grid" style="grid-template-columns:minmax(0, 1fr);max-width:520px;margin:0 auto">
+  <div class="art-grid">
     <div class="art-card">
       <span class="art-tag">Business Impact</span>
       <h3>The Real Cost of Copycat Apps: What You're Losing Without Knowing It</h3>
-      <p>Most app companies underestimate the revenue impact of brand abuse. This breaks down how copycats steal downloads, inflate acquisition costs, and erode lifetime value.</p>
+      <p>Most app companies underestimate the revenue impact of brand abuse. This breaks down exactly how copycats steal downloads, inflate your CAC, and silently erode lifetime value.</p>
       <a href="/resources/cost-of-copycat-apps/" class="art-link">Read the guide →</a>
     </div>
-  </div>  </div>
+    <div class="art-card">
+      <span class="art-tag">Revenue Impact</span>
+      <h3>Five Revenue Leaks Copycat Apps Create — And Why Most Teams Miss Them</h3>
+      <p>From organic search diversion to subscription hijacking, copycat apps attack your revenue in five distinct ways — most of which never show up in your analytics.</p>
+      <a href="/resources/revenue-impact-brand-abuse/" class="art-link">Read the guide →</a>
+    </div>
+    <div class="art-card">
+      <span class="art-tag">Industry Trends</span>
+      <h3>Why App Brand Abuse Is Getting Worse: What Every Publisher Needs to Know</h3>
+      <p>AI-generated clones, cross-platform impersonation, and overwhelmed enforcement teams have made brand abuse easier than ever to execute — and harder than ever to stop alone.</p>
+      <a href="/resources/app-brand-abuse-trends/" class="art-link">Read the guide →</a>
+    </div>
+  </div>
 </div>
 </div>
 
@@ -635,7 +719,7 @@ main{position:relative;z-index:1}
     </div>
     <div class="ftr-r" style="display:flex;align-items:center;gap:18px">
     <a href="https://www.linkedin.com/company/ipdefense-ai/about/" target="_blank" rel="noopener" aria-label="LinkedIn" style="color:var(--muted);display:flex;align-items:center;transition:color .2s" onmouseover="this.style.color='#0A66C2'" onmouseout="this.style.color='var(--muted)'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="display:block"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-    <span>© 2026 IP Defense · <a href="/privacy-policy/">Privacy Policy</a> · <a href="/terms-of-service/">Terms of Service</a> · <a href="https://ipdefense.ai">ipdefense.ai</a></span>
+    <span>© 2026 IP Defense · <a href="https://ipdefense.ai">ipdefense.ai</a></span>
   </div>
   </div>
 </footer>
@@ -702,20 +786,94 @@ main{position:relative;z-index:1}
   setTimeout(scan,800);
 })();
 
-// ── Phone auto-formatter → +1 (416) 456-0868 ─────────────────────────
+// ── International phone formatter (up to 3-digit country codes) ─────
 function fmtPhone(el){
-  var raw = el.value.replace(/\D/g,'');
-  if(raw.length > 11) raw = raw.slice(0,11);
-  if(!raw.length){ el.value=''; return; }
-  var hasCC = raw.length===11 && raw[0]==='1';
-  var d = hasCC ? raw.slice(1) : raw.slice(0,10);
-  var prefix = (hasCC || raw.length>10) ? '+1 ' : '';
-  var out;
-  if(d.length<=3)       out = prefix + '(' + d;
-  else if(d.length<=6)  out = prefix + '(' + d.slice(0,3) + ') ' + d.slice(3);
-  else                  out = prefix + '(' + d.slice(0,3) + ') ' + d.slice(3,6) + '-' + d.slice(6,10);
-  el.value = out;
+  var raw=el.value.replace(/\D/g,'');
+  if(!raw){el.value='';return;}
+  // North America (+1)
+  if((raw[0]==='1'&&raw.length>=2)||(raw.length<=10&&raw[0]!=='0')){
+    var d=(raw[0]==='1')?raw.slice(1,11):raw.slice(0,10);
+    var out='+1 ';
+    if(d.length<=3)out+=d.length?'('+d:'';
+    else if(d.length<=6)out+='('+d.slice(0,3)+') '+d.slice(3);
+    else out+='('+d.slice(0,3)+') '+d.slice(3,6)+'-'+d.slice(6,10);
+    el.value=out;return;
+  }
+  // 2-digit country codes (UK=44, France=33, Germany=49, etc.)
+  var cc2=[44,33,49,39,34,31,46,47,45,41,43,32,353,61,81,82,86,91,55,52,54,57,56,51,58,62,66,63,60,65,64,27,20,234];
+  var n=parseInt(raw.slice(0,2));
+  if(cc2.indexOf(n)>-1){
+    el.value='+'+raw.slice(0,2)+' '+raw.slice(2);return;
+  }
+  // 3-digit country codes
+  el.value='+'+raw.slice(0,3)+' '+raw.slice(3);
 }
+
+// ── Email live validation ──────────────────────────────────────────
+function validateEmailLive(el){
+  var v=el.value.trim();
+  if(!v)return;
+  var ok=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
+  el.style.borderColor=ok?'var(--success)':'var(--danger)';
+}
+function isValidEmail(e){
+  return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e.trim())&&e.indexOf('@')>0&&e.split('@')[1].indexOf('.')>0;
+}
+
+// ── App Store / Google Play URL Validator ──────────────────────────
+function validateAppURL(input){
+  var url=(input.value||'').trim();
+  var pid=input.id.replace('f-app-','');
+  var prev=document.getElementById('ap-'+pid);
+  if(!prev)return;
+  if(url.length<10){prev.innerHTML='';return;}
+  // Apple App Store
+  var iosM=url.match(/(?:apps\.apple\.com|itunes\.apple\.com)\/.*\/id(\d+)/);
+  if(iosM){
+    var aid=iosM[1];
+    prev.innerHTML='<span class="ap-loading">🔍 Validating App Store listing…</span>';
+    fetch('https://itunes.apple.com/lookup?id='+aid)
+      .then(function(r){return r.json();})
+      .then(function(data){
+        if(data.resultCount>0){
+          var a=data.results[0];
+          prev.innerHTML='<div class="ap-valid"><img class="ap-icon" src="'+a.artworkUrl60+'" alt="'+a.trackName+'" onerror="this.style.display='none'"><div class="ap-info"><span class="ap-name">'+a.trackName+'</span><span class="ap-store">App Store · '+a.sellerName+'</span></div><span class="ap-ok">✓ Verified</span></div>';
+        }else{
+          prev.innerHTML='<span class="ap-invalid">⚠ App not found — double-check this URL</span>';
+        }
+      }).catch(function(){
+        prev.innerHTML='<span class="ap-invalid">⚠ Unable to verify — link may still be valid</span>';
+      });
+    return;
+  }
+  // Google Play
+  var gpM=url.match(/play\.google\.com\/store\/apps\/details\?id=([a-zA-Z0-9_.]+)/);
+  if(gpM){
+    prev.innerHTML='<div class="ap-valid ap-play"><div class="ap-play-icon">▶</div><div class="ap-info"><span class="ap-name">'+gpM[1]+'</span><span class="ap-store">Google Play Store</span></div><span class="ap-ok">✓ Valid URL</span></div>';
+    return;
+  }
+  if(url.length>20){prev.innerHTML='<span class="ap-invalid">⚠ Enter an App Store or Google Play URL</span>';}
+}
+
+// ── Intersection Observer: active nav state ─────────────────────
+(function(){
+  if(typeof IntersectionObserver==='undefined')return;
+  var anchors=document.querySelectorAll('.nav-anchor');
+  if(!anchors.length)return;
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        anchors.forEach(function(a){a.classList.remove('active');});
+        var href='#'+e.target.id;
+        anchors.forEach(function(a){if(a.getAttribute('href')===href)a.classList.add('active');});
+      }
+    });
+  },{threshold:0.35,rootMargin:'-60px 0px -40% 0px'});
+  ['how','results','who','threats'].forEach(function(id){
+    var el=document.getElementById(id);
+    if(el)obs.observe(el);
+  });
+})();
 // ─────────────────────────────────────────────────────────────────────
 
 // ── PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL HERE ──────────────────────
@@ -745,16 +903,18 @@ async function submitForm(btn){
 
   var firstName = (document.getElementById('f-fname').value  || '').trim();
   var lastName  = (document.getElementById('f-lname').value  || '').trim();
+  var company   = (document.getElementById('f-company').value || '').trim();
   var email     = (document.getElementById('f-email').value  || '').trim();
   var phone     = (document.getElementById('f-phone').value  || '').trim();
   var situation = (document.getElementById('f-situation').value || '').trim();
   var appUrls   = Array.from(document.querySelectorAll('.app-url-input'))
                         .map(function(i){ return i.value.trim(); }).filter(Boolean);
 
-  if(!firstName)                              return showFError('Please enter your first name.');
-  if(!email || email.indexOf('@') < 1)        return showFError('Please enter a valid email address.');
-  if(!appUrls.length)                         return showFError('Please add at least one app store URL.');
-  if(!situation)                              return showFError('Please describe your situation.');
+  if(!firstName)                           return showFError('Please enter your first name.');
+  if(!company)                             return showFError('Please enter your company name.');
+  if(!isValidEmail(email))                 return showFError('Please enter a valid work email address (e.g. jane@company.com).');
+  if(!appUrls.length)                      return showFError('Please add at least one app store URL.');
+  if(!situation)                           return showFError('Please describe your situation.');
   if(SCRIPT_URL === 'YOUR_APPS_SCRIPT_URL_HERE') return showFError('Form not yet connected — see setup guide.');
 
   btn.disabled = true;
@@ -765,7 +925,7 @@ async function submitForm(btn){
       method:  'POST',
       mode:    'no-cors',
       headers: { 'Content-Type': 'application/json' },
-      body:    JSON.stringify({ firstName, lastName, email, phone, appUrls, situation })
+      body:    JSON.stringify({ firstName, lastName, company, email, phone, appUrls, situation })
     });
   } catch(e){}
 
@@ -774,6 +934,25 @@ async function submitForm(btn){
   btn.style.background  = 'var(--success)';
   btn.style.boxShadow   = 'none';
 }
+
+// ── Hamburger menu ───────────────────────────────────────────────
+(function(){
+  var ham=document.getElementById('navHam'),mob=document.getElementById('navMob');
+  if(!ham||!mob)return;
+  ham.addEventListener('click',function(){
+    var open=mob.classList.toggle('open');
+    ham.classList.toggle('open',open);
+    ham.setAttribute('aria-expanded',String(open));
+    document.body.style.overflow=open?'hidden':'';
+  });
+  mob.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){
+      mob.classList.remove('open');ham.classList.remove('open');
+      ham.setAttribute('aria-expanded','false');
+      document.body.style.overflow='';
+    });
+  });
+})();
 </script>
 </body>
 </html>
