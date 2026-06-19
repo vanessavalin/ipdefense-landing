@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://ipdefense.ai/sitemap.xml
