@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>About IP Defense — App Brand Protection Service</title>
-<meta name="description" content="IP Defense is an operational brand enforcement service for mobile app companies. We find and remove copycat apps, impersonators, and infringing listings so your team can focus on building.">
+<meta name="description" content="IP Defense is an operational brand enforcement service for mobile app companies. We find and remove copycat apps, impersonators, and infringing listings.">
 <link rel="canonical" href="https://ipdefense.ai/about/">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <meta property="og:title" content="About IP Defense — App Brand Protection Service">
-<meta property="og:description" content="IP Defense is an operational brand enforcement service for mobile app companies. We find and remove copycat apps, impersonators, and infringing listings so your team can focus on building.">
+<meta property="og:description" content="IP Defense is an operational brand enforcement service for mobile app companies. We find and remove copycat apps, impersonators, and infringing listings.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ipdefense.ai/about/">
-<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Archivo:wght@700;800;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"IP Defense","url":"https://ipdefense.ai"}</script>
 <style>
 :root{
   --bg0:#040C19;--bg1:#071220;--bg2:#0C1A30;--bg3:#111F38;
@@ -60,71 +61,65 @@ footer{border-top:1px solid var(--bdr);background:var(--bg1);padding:32px 28px}
 .btn-outline{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;border:1px solid var(--bdr2);color:var(--text);font-size:14px;font-weight:600;border-radius:10px;transition:all .2s}
 .btn-outline:hover{border-color:var(--blue);background:rgba(26,91,255,.08)}
 @media(max-width:880px){.nl{display:none}}
-</style>
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Organization", "name": "IP Defense", "alternateName": "IP Defense.ai", "url": "https://ipdefense.ai", "description": "IP Defense is an operational brand enforcement service that identifies and removes copycat apps, impersonation accounts, and infringing listings from app stores, social platforms, and the web.", "serviceType": "App Brand Protection", "areaServed": "Worldwide", "knowsAbout": ["App Store enforcement", "Google Play enforcement", "Brand protection", "Copycat app removal", "IP infringement"], "foundingDate": "2024", "numberOfEmployees": {"@type": "QuantitativeValue", "value": 10}}</script>
-<style>
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin:48px 0}
-.stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:40px 0}
-.stat-box{background:var(--bg2);border:1px solid var(--bdr);border-radius:16px;padding:24px;text-align:center}
-.stat-n{font-family:var(--fd);font-size:40px;font-weight:900;letter-spacing:-.04em;color:var(--text);display:block;line-height:1;margin-bottom:6px}
-.stat-l{font-size:13px;color:var(--muted);font-weight:500}
-.value-item{display:flex;gap:16px;margin-bottom:24px}
-.v-ico{width:44px;height:44px;background:rgba(26,91,255,.1);border:1px solid rgba(26,91,255,.22);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:20px}
-.v-title{font-size:16px;font-weight:700;color:var(--text);margin-bottom:4px}
-.v-desc{font-size:14px;color:var(--muted);line-height:1.6}
-@media(max-width:720px){.about-grid,.stat-row{grid-template-columns:1fr}}
-</style>
+
+.nav-ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
+.nav-ham span{display:block;width:22px;height:2.5px;background:var(--text);border-radius:2px;transition:all .3s}
+.nav-ham.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-ham.open span:nth-child(2){opacity:0}
+.nav-ham.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.nav-mob{display:none;position:fixed;top:68px;left:0;right:0;background:rgba(4,12,25,.98);border-bottom:1px solid var(--bdr);padding:20px 28px 28px;z-index:199;flex-direction:column}
+.nav-mob.open{display:flex}
+.nav-mob a{font-size:16px;color:var(--muted);padding:13px 0;border-bottom:1px solid var(--bdr)}
+.nav-mob a:last-child{border-bottom:none;margin-top:12px;padding:13px;text-align:center;background:var(--blue);color:#fff!important;border-radius:8px;font-weight:700}
+.nl a.active{color:var(--text)}
+.art-meta{font-size:13px;color:var(--muted);margin-bottom:36px;padding-bottom:24px;border-bottom:1px solid var(--bdr)}
+.art-intro{font-size:19px;line-height:1.72;color:var(--text);margin-bottom:32px}
+.callout{background:var(--bg2);border:1px solid var(--bdr2);border-left:3px solid var(--cyan);border-radius:0 12px 12px 0;padding:18px 22px;margin:24px 0}
+.callout p{font-size:15px;color:var(--text);margin:0}
+.cta-band{background:linear-gradient(135deg,rgba(26,91,255,.1),rgba(0,196,238,.05));border:1px solid rgba(26,91,255,.22);border-radius:20px;padding:44px;text-align:center;margin-top:64px}
+.cta-band h2{margin:0 0 12px}.cta-band p{max-width:500px;margin:0 auto 24px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;background:var(--blue);color:#fff;font-size:15px;font-weight:700;border-radius:10px;transition:all .2s;box-shadow:0 4px 24px var(--blue-glow)}
+.btn:hover{background:var(--blue2);transform:translateY(-2px)}
+.btn-outline{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border:1px solid var(--bdr2);color:var(--text);font-size:14px;font-weight:600;border-radius:10px;transition:all .2s;margin-left:12px}
+[id]{scroll-margin-top:80px}
+@media(max-width:880px){.nl,.nav-btn{display:none!important}.nav-ham{display:flex}.wrap-sm,.wrap{padding:56px 20px 64px}.wrap-sm{max-width:1060px}.about-grid,.step-cols{grid-template-columns:1fr!important}.stat-row{grid-template-columns:1fr 1fr!important}}
+@media(max-width:640px){.wrap-sm,.wrap{padding:44px 16px 56px}.ni{padding:0 16px}.ftr{flex-direction:column;align-items:flex-start}h1{font-size:clamp(26px,7vw,38px)!important}h2{font-size:clamp(20px,5vw,28px)!important}}</style>
 </head>
 <body>
-<nav><div class="ni">
-  <a href="/" class="logo" style="color:var(--text)"><svg style="width:28px;height:25px" viewBox="0 0 80 72" fill="none"><path d="M 37 4 L 61 14 V 36 L 37 67 L 13 36 V 14 Z" stroke="#2D6EFF" stroke-width="5.5" stroke-linejoin="miter"/><rect x="2" y="28.6" width="70" height="5" fill="#00C4EE"/><circle cx="2" cy="31.1" r="2" fill="#00C4EE" opacity="0.6"/><circle cx="75" cy="31.1" r="4.5" fill="#00C4EE"/></svg><span>IP Defense<span class="logo-ai">.ai</span></span></a>
-  <ul class="nl"><li><a href="/#how">How It Works</a></li><li><a href="/#results">Results</a></li><li><a href="/pricing/">Pricing</a></li><li><a href="/resources/">Resources</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/about/" style="color:var(--text)">About</a></li></ul>
-  <a href="/#contact" class="nav-btn">Free IP Risk Review</a>
-</div></nav>
+<nav><div class="ni"><a href="/" style="display:flex;align-items:center;gap:10px;font-family:var(--fd);font-size:19px;font-weight:800;letter-spacing:-.02em;color:var(--text)"><svg style="width:26px;height:23px;flex-shrink:0" viewBox="0 0 80 72" fill="none"><path d="M37,4 L61,14 L61,36 L37,67 L13,36 L13,14 Z" stroke="#2D6EFF" stroke-width="5.5" stroke-linejoin="miter"/><rect x="2" y="28.6" width="70" height="5" fill="#00C4EE"/><circle cx="2" cy="31.1" r="2" fill="#00C4EE" opacity="0.6"/><circle cx="75" cy="31.1" r="4.5" fill="#00C4EE"/></svg><span>IP Defense<span class="logo-ai">.ai</span></span></a><ul class="nl"><li><a href="/#how">How It Works</a></li><li><a href="/pricing/">Pricing</a></li><li><a href="/resources/">Resources</a></li><li><a href="/faq/">FAQ</a></li><li><a href="/about/" class="active">About</a></li></ul><a href="/#contact" class="nav-btn">Get a Free Scan</a><button class="nav-ham" id="navHam" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button></div><div class="nav-mob" id="navMob"><a href="/#how">How It Works</a><a href="/pricing/">Pricing</a><a href="/resources/">Resources</a><a href="/faq/">FAQ</a><a href="/about/" class="active">About</a><a href="/#contact">Get a Free Scan</a></div></nav><script>(function(){var h=document.getElementById("navHam"),m=document.getElementById("navMob");if(!h||!m)return;h.addEventListener("click",function(){var o=m.classList.toggle("open");h.classList.toggle("open",o);h.setAttribute("aria-expanded",String(o));document.body.style.overflow=o?"hidden":"";});m.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){m.classList.remove("open");h.classList.remove("open");h.setAttribute("aria-expanded","false");document.body.style.overflow="";});});var p=window.location.pathname;document.querySelectorAll(".nl a,.nav-mob a").forEach(function(a){if(a.getAttribute("href")===p)a.classList.add("active");});})();</script>
 <div class="wrap">
-  <span class="pg-lbl">About Us</span>
-  <h1 class="pg-h1">We protect apps the way operators think about the problem.</h1>
+  <span class="pg-lbl">About</span>
+  <h1 style="font-family:var(--fd);font-size:clamp(32px,4.5vw,52px);font-weight:900;letter-spacing:-.04em;line-height:1.08;margin-bottom:20px">We protect apps the way operators think about the problem.</h1>
+  <p style="font-size:18px;color:var(--muted);line-height:1.72;max-width:640px;margin-bottom:48px">IP Defense is an operational enforcement service — not a law firm, not a monitoring tool. We find brand abuse, build the evidence, submit the complaints, and track every case to resolution.</p>
 
-  <div class="about-grid">
+  <div class="about-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;margin-bottom:56px">
     <div>
-      <p style="font-size:18px;color:var(--text);line-height:1.75;margin-bottom:20px">IP Defense is a brand enforcement service built specifically for mobile app companies. We identify copycat apps, impersonation accounts, and infringing listings — then handle the entire process of getting them removed.</p>
-      <p>We are not a law firm. We are an operational service — the team you bring in when brand abuse has crossed from "something we should deal with" to "something that is costing us downloads and revenue right now."</p>
-      <p>Our work sits between the brand team that notices the problem and the legal team that would handle escalation to litigation. Most cases never need to go that far — platform enforcement, properly executed, resolves the majority of app brand abuse without formal legal action.</p>
+      <p style="font-size:17px;color:var(--text);line-height:1.75;margin-bottom:18px">App brand abuse follows a predictable pattern: a copycat registers a similar name, clones your icon, stuffs your keywords into their metadata, and starts diverting the traffic your product quality earned.</p>
+      <p>Platform enforcement works — when done correctly. The difference between a complaint that gets acted on and one that doesn't is knowing the right violation category, the right evidence format, and when to escalate. That operational expertise is what we provide.</p>
+      <p>We've run this process across the App Store, Google Play, Meta, TikTok, X, YouTube, and web registrars. 200+ resolved cases across 6+ platforms is the proof point.</p>
     </div>
-    <div>
-      <div class="stat-row" style="margin:0">
-        <div class="stat-box"><span class="stat-n">200+</span><span class="stat-l">Issues resolved</span></div>
-        <div class="stat-box"><span class="stat-n" style="color:var(--cyan)">240+</span><span class="stat-l">Infringers contacted</span></div>
-        <div class="stat-box"><span class="stat-n" style="color:var(--blue2)">6+</span><span class="stat-l">Platforms enforced</span></div>
-      </div>
+    <div class="stat-row" style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+      <div style="background:var(--bg2);border:1px solid var(--bdr);border-radius:14px;padding:22px;text-align:center"><span style="font-family:var(--fd);font-size:38px;font-weight:900;color:var(--text);display:block;line-height:1;margin-bottom:6px">200+</span><span style="font-size:13px;color:var(--muted)">Issues Resolved</span></div>
+      <div style="background:var(--bg2);border:1px solid var(--bdr);border-radius:14px;padding:22px;text-align:center"><span style="font-family:var(--fd);font-size:38px;font-weight:900;color:var(--cyan);display:block;line-height:1;margin-bottom:6px">240+</span><span style="font-size:13px;color:var(--muted)">Infringers Contacted</span></div>
+      <div style="background:var(--bg2);border:1px solid var(--bdr);border-radius:14px;padding:22px;text-align:center"><span style="font-family:var(--fd);font-size:38px;font-weight:900;color:var(--blue2);display:block;line-height:1;margin-bottom:6px">6+</span><span style="font-size:13px;color:var(--muted)">Platforms</span></div>
+      <div style="background:var(--bg2);border:1px solid var(--bdr);border-radius:14px;padding:22px;text-align:center"><span style="font-family:var(--fd);font-size:20px;font-weight:900;color:var(--success);display:block;line-height:1.2;margin-bottom:6px">Proven<br>Results</span><span style="font-size:13px;color:var(--muted)">Enforcement Record</span></div>
     </div>
   </div>
 
-  <h2>What we actually do</h2>
-  <p>Brand abuse on app platforms follows predictable patterns. Someone registers a similar app name, copies your icon or screenshots, stuffs your brand keywords into their metadata, and starts diverting the organic search traffic that your marketing spend and product quality earned. On social platforms, impersonators create accounts under your brand name and intercept your community.</p>
-  <p>Platforms will act on well-documented complaints — but the complaint process requires knowing which violation category applies, what evidence each platform needs, how to write a complaint that gets routed to the right enforcement team, and how to escalate when first-level complaints don't result in action.</p>
-  <p>That operational knowledge is what IP Defense provides. We have run this process across Apple, Google, Meta, TikTok, X, YouTube, and web registrars. We know what works, what gets complaints rejected, and how to escalate when the standard process stalls.</p>
-
-  <h2>How we work</h2>
-  <div class="value-item"><div class="v-ico">🔍</div><div><div class="v-title">Discover</div><div class="v-desc">We scan app stores, social platforms, and the web to surface every copycat, impersonator, and infringing listing targeting your app — simultaneously, across all relevant platforms.</div></div></div>
-  <div class="value-item"><div class="v-ico">📋</div><div><div class="v-title">Document</div><div class="v-desc">We build evidence files for each violation, categorise by violation type, and prioritise by revenue and trust impact. Proper documentation is the difference between a complaint that gets acted on and one that gets closed without action.</div></div></div>
-  <div class="value-item"><div class="v-ico">⚡</div><div><div class="v-title">Resolve</div><div class="v-desc">We prepare and submit platform complaints, manage follow-up and escalation, and track every case through to final resolution. Apps removed. Names changed. Impersonators disabled.</div></div></div>
-
-  <h2>Why brand enforcement needs a specialist</h2>
-  <p>The most common failure mode we see is a founder or growth manager spending hours filing complaint reports through platform web forms, receiving no response, and concluding that "the platform won't do anything." In most of those cases, the complaint was filed under the wrong violation category, lacked the specific evidence the platform's enforcement team needed, or was submitted to a first-level triage queue that doesn't result in action for contextual violations.</p>
-  <p>Platform enforcement is a process. Done correctly, with the right evidence and the right escalation path, the majority of clear violations get resolved. Our 200+ resolved cases across six platforms is the proof point.</p>
+  <h2 style="font-family:var(--fd);font-size:clamp(22px,3vw,34px);font-weight:800;letter-spacing:-.03em;margin:0 0 16px">How we work</h2>
+  <div class="step-cols" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:56px">
+    <div style="background:var(--bg2);border:1px solid var(--bdr);border-radius:14px;padding:24px"><span style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--label);display:block;margin-bottom:12px">Step 01</span><h3 style="margin-top:0;margin-bottom:8px">Discover</h3><p style="font-size:14px">Systematic scan across app stores, social platforms, and the web — every surface where your brand can be copied.</p></div>
+    <div style="background:var(--bg2);border:1px solid var(--bdr);border-radius:14px;padding:24px"><span style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--label);display:block;margin-bottom:12px">Step 02</span><h3 style="margin-top:0;margin-bottom:8px">Document</h3><p style="font-size:14px">Evidence built for each violation — categorised by type, prioritised by revenue impact, ready for submission.</p></div>
+    <div style="background:var(--bg2);border:1px solid var(--bdr);border-radius:14px;padding:24px"><span style="font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--label);display:block;margin-bottom:12px">Step 03</span><h3 style="margin-top:0;margin-bottom:8px">Resolve</h3><p style="font-size:14px">Complaints submitted, escalations managed, cases tracked to close. Apps removed. Names changed. Done.</p></div>
+  </div>
 
   <div class="cta-band">
-    <h2>See what's targeting your app.</h2>
-    <p>The free IP Risk Review shows you exactly what we find — before you commit to anything.</p>
-    <a href="/#contact" class="btn">Get a Free IP Risk Review</a>
-    &nbsp;&nbsp;
+    <h2 style="font-family:var(--fd)">See what's targeting your app.</h2>
+    <p>Free scan — no commitment. We'll tell you exactly what we find.</p>
+    <a href="/#contact" class="btn">Get a Free Scan</a>
     <a href="/pricing/" class="btn-outline">View Pricing</a>
   </div>
 </div>
-<footer><div class="ftr">
-  <div class="ftr-l"><a href="/" style="color:var(--text)"><svg style="width:28px;height:25px" viewBox="0 0 80 72" fill="none"><path d="M 37 4 L 61 14 V 36 L 37 67 L 13 36 V 14 Z" stroke="#2D6EFF" stroke-width="5.5" stroke-linejoin="miter"/><rect x="2" y="28.6" width="70" height="5" fill="#00C4EE"/><circle cx="2" cy="31.1" r="2" fill="#00C4EE" opacity="0.6"/><circle cx="75" cy="31.1" r="4.5" fill="#00C4EE"/></svg><span>IP Defense<span class="logo-ai">.ai</span></span></a></div>
-  <div style="font-size:13px;color:var(--muted)">Brand and Revenue Protection</div>
-  <div class="ftr-r">© 2026 IP Defense · <a href="/privacy-policy/" style="color:var(--blue2)">Privacy Policy</a> · <a href="/terms-of-service/" style="color:var(--blue2)">Terms of Service</a> · <a href="https://ipdefense.ai" style="color:var(--blue2)">ipdefense.ai</a><a href="https://www.linkedin.com/company/ipdefense-ai/about/" target="_blank" rel="noopener noreferrer" aria-label="IP Defense on LinkedIn" style="display:inline-flex;align-items:center;color:var(--muted);transition:color .2s;margin-left:14px;vertical-align:middle" onmouseover="this.style.color='#0A66C2'" onmouseout="this.style.color=''"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width:18px;height:18px;display:block"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></div>
-</div></footer>
-</body></html>
+<footer><div class="ftr"><div><a href="/" style="display:flex;align-items:center;gap:10px;font-family:var(--fd);font-size:18px;font-weight:800;letter-spacing:-.02em;color:var(--text)"><svg style="width:26px;height:23px;flex-shrink:0" viewBox="0 0 80 72" fill="none"><path d="M37,4 L61,14 L61,36 L37,67 L13,36 L13,14 Z" stroke="#2D6EFF" stroke-width="5.5" stroke-linejoin="miter"/><rect x="2" y="28.6" width="70" height="5" fill="#00C4EE"/><circle cx="2" cy="31.1" r="2" fill="#00C4EE" opacity="0.6"/><circle cx="75" cy="31.1" r="4.5" fill="#00C4EE"/></svg><span>IP Defense<span style="color:var(--cyan)">.ai</span></span></a><div style="font-size:12px;color:var(--muted);margin-top:4px">Brand and Revenue Protection</div></div><div style="display:flex;align-items:center;gap:20px;font-size:13px;color:var(--muted)"><a href="https://www.linkedin.com/company/ipdefense-ai/about/" target="_blank" rel="noopener" style="color:var(--muted);display:flex;align-items:center;transition:color .2s" onmouseover="this.style.color='#0A66C2'" onmouseout="this.style.color='var(--muted)'"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a><span>© 2026 IP Defense · <a href="https://ipdefense.ai" style="color:var(--blue2)">ipdefense.ai</a></span></div></div></footer>
+</body>
+</html>
