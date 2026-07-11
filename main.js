@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Show everything immediately, no motion
     revealElements.forEach(function(el) { el.classList.add('active'); });
   } else {
-    var observerOptions = { root: null, rootMargin: '0px 0px -8% 0px', threshold: 0.15 };
+    var observerOptions = { root: null, rootMargin: '0px 0px -40px 0px', threshold: 0 };
     var observer = new IntersectionObserver(function(entries, obs) {
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
@@ -32,6 +32,12 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }, observerOptions);
     revealElements.forEach(function(el) { observer.observe(el); });
+    // Safety net: never leave content hidden. If anything hasn't revealed
+    // shortly after load (e.g. a very tall section, or an observer edge case),
+    // force it visible so content is never stuck at opacity:0.
+    setTimeout(function() {
+      revealElements.forEach(function(el) { el.classList.add('active'); });
+    }, 2500);
   }
 
   // Scanner Animation Logic
@@ -62,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Form Logic
-  var phoneInput = document.getElementById('f-phone'); if (phoneInput) { phoneInput.addEventListener('input', function(){ fmtPhone(phoneInput); }); }
+  var phoneInput = document.getElementById('f-phone'); /* live formatting removed — it blocked deletion and forced +1 on international numbers */
   var firstAppInput = document.getElementById('f-app-0'); if (firstAppInput) { firstAppInput.addEventListener('input', function(){ validateAppURL(firstAppInput); }); }
   var addBtn = document.getElementById('fAddBtn'); if (addBtn) { addBtn.addEventListener('click', addAppLink); }
   var submitBtn = document.getElementById('fsubmit'); if (submitBtn) { submitBtn.addEventListener('click', submitForm); }
