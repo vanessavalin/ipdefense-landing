@@ -1,0 +1,33 @@
+# IP Defense
+
+> IP Defense is a managed brand protection and online enforcement service that removes copycat apps, impersonators, and lookalike listings across app stores, social platforms, marketplaces, and web domains. Technology finds the threats; expert analysts verify them and manage takedowns to resolution.
+
+IP Defense is not a law firm and does not provide legal advice. It combines continuous monitoring with a human-led enforcement team, following a three-step process: Discover (continuous brand intelligence), Verify (analyst review of every threat before action), and Resolve (complaints filed, escalations managed, cases tracked to close). Platforms make the final removal decision; IP Defense prepares verified evidence, files through the correct channels, and manages follow-up.
+
+## Service tiers
+- Intelligence Only: AI-powered monitoring with expert-reviewed intelligence reports, for teams that enforce in-house.
+- Guided Protection: adds enforcement strategy, complaint and evidence guidance, and ongoing case support.
+- Managed Protection (most popular): fully outsourced brand protection — end-to-end case management, takedown submissions, platform escalation, and dedicated account management.
+
+Pricing is bespoke, scoped to each brand's footprint, platforms, and active infringement volume. Engagements begin with a paid Onboarding Review that produces an IP Defense Action Plan.
+
+## Core pages
+- [How It Works](https://ipdefense.ai/how-it-works.html): The Discover / Verify / Resolve process and what analyst verification adds over automated tools.
+- [Pricing](https://ipdefense.ai/pricing.html): The three service tiers and how engagements are scoped and priced.
+- [Compare](https://ipdefense.ai/compare.html): IP Defense versus legacy enterprise suites and automated software tools.
+- [App Brand Protection](https://ipdefense.ai/apps.html): Removing copycat apps and impersonators from the Apple App Store and Google Play.
+- [Case Study](https://ipdefense.ai/case-study.html): 200+ brand abuse issues resolved and 240+ infringers contacted across six platforms.
+- [FAQ](https://ipdefense.ai/faq.html): Answers on removals, timelines, platform coverage, pricing, and expected results.
+- [About](https://ipdefense.ai/about.html): What IP Defense is and how the team works.
+
+## Guides
+- [The Real Cost of Copycat Apps](https://ipdefense.ai/article-cost-of-copycats.html)
+- [Brand Monitoring vs. Brand Intelligence](https://ipdefense.ai/article-brand-intelligence.html)
+- [The Hidden Dangers of Unverified Enforcement](https://ipdefense.ai/article-automated-takedowns.html)
+- [Defending Your SaaS Trademark Globally](https://ipdefense.ai/article-saas-trademark.html)
+- [Social Media Executive Impersonation](https://ipdefense.ai/article-executive-impersonation.html)
+- [Brand Protection Glossary](https://ipdefense.ai/glossary.html)
+
+## Contact
+- Email: hello@ipdefense.ai
+- Web: https://ipdefense.ai
